@@ -4,26 +4,26 @@
 class Agentshield < Formula
   desc "Deterministic, offline security scanner and runtime guard for AI agent tools & MCP servers"
   homepage "https://aiconnai.github.io/agentshield"
-  version "1.0.3"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aiconnai/agentshield/releases/download/v1.0.3/agentshield-v1.0.3-aarch64-apple-darwin.tar.gz"
-      sha256 "515857349b77f35c40e137cbb3ee2aa0ac258e8b43b42b05de5b5f8efad8b525"
+      url "https://github.com/aiconnai/agentshield/releases/download/v1.1.0/agentshield-v1.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "955c4938cdecd5df9a0540b92f7dfd7237272f77bcd925f7201f1211ce88091a"
     else
-      url "https://github.com/aiconnai/agentshield/releases/download/v1.0.3/agentshield-v1.0.3-x86_64-apple-darwin.tar.gz"
-      sha256 "d09251fabe8894dc6964ce26538e7608717659a49836679b13bb775d98f5350e"
+      url "https://github.com/aiconnai/agentshield/releases/download/v1.1.0/agentshield-v1.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "4c27767daa49ec4a41bd3ee750847f82888a83119bf5cd857629d3b8de202c69"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aiconnai/agentshield/releases/download/v1.0.3/agentshield-v1.0.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "84cf45d1b149f3b4d6121c60d6ae9cf57bfebf8749ed2bf5ed878e412b920bd9"
+      url "https://github.com/aiconnai/agentshield/releases/download/v1.1.0/agentshield-v1.1.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "71e59f263b47540081308310b8bac87145a86eb38e7890354ff661ade18b877e"
     else
-      url "https://github.com/aiconnai/agentshield/releases/download/v1.0.3/agentshield-v1.0.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4cccbeba132bfcd8ddea2dffd002474cf20779687040d9840d40ba44fae9c9ed"
+      url "https://github.com/aiconnai/agentshield/releases/download/v1.1.0/agentshield-v1.1.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "eeb26849e04f694e004ac2238f5620a2710941e554627e3a2c3a5be7823ca582"
     end
   end
 
@@ -32,6 +32,6 @@ class Agentshield < Formula
   end
 
   test do
-    assert_match "agentshield 1.0.3", shell_output("#{bin}/agentshield --version")
+    assert_match "agentshield 1.1.0", shell_output("#{bin}/agentshield --version")
   end
 end
